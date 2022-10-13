@@ -67,13 +67,14 @@ public class Pizza {
             this.bill = this.bill + "Paperbag Added: "+this.addTakeawayBag+"\n";
 
             this.price = this.price+this.addTakeawayBag;
-            this.isExtraToppingsAdded = true;
+            this.isTakeawayBagRequired = true;
         }
     }
 
     public String getBill(){
         if(!isBillCreated){
             this.bill = this.bill + "Total Price: "+this.price+"\n";
+            this.isBillCreated = true;
         }
         return this.bill;
     }
